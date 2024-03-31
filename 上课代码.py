@@ -17,6 +17,9 @@ from keras.datasets import mnist
 import numpy as np
 (train_images,train_labels),(test_images,test_labels) = mnist.load_data()
 
+
+
+
 # print(type(train_images))
 # print(type(train_images[1,1,1]))
 #
@@ -51,3 +54,6 @@ print(test_labels[0:5])
 loss, accuracy = model.evaluate(test_images, test_labels)
 print(loss)
 print(accuracy)
+
+
+
