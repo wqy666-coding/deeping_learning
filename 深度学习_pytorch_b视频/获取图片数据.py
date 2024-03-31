@@ -32,14 +32,14 @@ class MyData(Dataset):
     def __getitem__(self, idx):
         img_name = self.img_path[idx]
         img_item_path = os.path.join(self.root,self.label,img_name)
-        img = cv.imread(img_item_path)
+        img_cv = cv.imread(img_item_path)
         label = self.label
-        return img,label
+        return img_item_path,img_cv,label
     def __len__(self):
         return len(self.img_path)
     def show(self,num):
-        img,label = self.__getitem__(num)
-        cv.imshow('img',img)
+        img_item_path,img_cv,label = self.__getitem__(num)
+        cv.imshow('img',img_cv)
         cv.waitKey(0)
         cv.destroyAllWindows()
 if __name__ =='__main__':
