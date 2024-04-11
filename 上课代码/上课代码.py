@@ -17,7 +17,7 @@ from keras.datasets import mnist
 import numpy as np
 (train_images,train_labels),(test_images,test_labels) = mnist.load_data()
 
-
+print(train_images.shape)
 
 
 # print(type(train_images))
@@ -25,7 +25,7 @@ import numpy as np
 #
 # print(type(train_labels[1]))
 
-# print(train_images.shape)
+print(train_images.shape)
 train_images = train_images.reshape((60000,28*28)) #二维变一维
 # print(train_images.shape)
 
